@@ -1,7 +1,7 @@
 C = gcc
 flag = -c -Wall -Werror -std=c99
 
-all: ./bin/chess ./bin/test
+all: ./bin/chess
 
 ./bin/chess: ./build/src/main.o ./build/src/board_print_plain.o ./build/src/board.o
 	gcc ./build/src/main.o ./build/src/board_print_plain.o ./build/src/board.o -o ./bin/chess
