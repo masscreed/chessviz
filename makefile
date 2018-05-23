@@ -18,3 +18,6 @@ all: ./bin/chess
 .PHONY: clean
 clean:
 	rm -rf ./build/src/*.o
+||||||| merged common ancestors
+all:
+	gcc -Wall -o chess.out chess.c
