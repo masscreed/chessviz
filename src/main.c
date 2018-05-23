@@ -1,32 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-char** create_bord(char** ch);
+#include "board_print_plain.h"
+#include "board.h"
+
 int main() 
 {
-	char **ch = NULL;
-	ch = create_bord(ch);
+	char ch[9][9];
+	create_bord(ch);
+	print_board(ch);
+	char s[5];
+	scanf("%s", s);
+	check_string(ch, s);
+	printf("10\n");
+	print_board(ch);
 	
     return 0;
-}
-
-char** create_bord(char **p)
-{
-	p = (char**) malloc(9 * sizeof(char*));
-    for (int i = 0; i < 9; i++) {
-        p[i] = (char*) malloc(9 * sizeof(char));
-    }
-	char ko[9][9] = { 
-	"bnrqkrnb", 
-	"pppppppp",
-	"________",
-	"________",
-	"________",
-	"________",
-	"PPPPPPPP",
-	"BNRQKRNB",	
-	};
-	for(int i =0; i< 9; i++)
-		for(int j =0;j<9;j++)
-			p[i][j]=ko[i][j];
-	return p;
 }

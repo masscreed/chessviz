@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "board_print_plain.h"
 
-void print_board(char** ch)
+void print_board(char ch[][9])
 {
 	int i, j;
 	for (i = 0; i < 8; ++i)
