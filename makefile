@@ -1,5 +1,5 @@
 C = gcc
-flag = -c -Wall -Werror
+flag = -c -Wall -Werror -std=c99
 
 all: ./bin/chess ./bin/test
 
