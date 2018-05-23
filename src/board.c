@@ -5,7 +5,6 @@
 
 void check_string(char ch[][9], char s[])
 {
-	char buf;
 	printf("1\n");
 	if(s[0] >= 'a' && s[0] <= 'h' && s[1] >= '1' && s[1] <= '8' && s[3] >= 'a'
 		&& s[3] <= 'h' && s[4] >= '1' && s[4] <= '8')
