@@ -1,24 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "board.h"
 #include "board_print_plain.h"
 
-void check_string(char ch[][9], char s[])
+void check_string(char ch[][10], char s[])
 {
-	printf("1\n");
 	if(s[0] >= 'a' && s[0] <= 'h' && s[1] >= '1' && s[1] <= '8' && s[3] >= 'a'
 		&& s[3] <= 'h' && s[4] >= '1' && s[4] <= '8')
 	{
-		printf("4\n");
 		if(ch[s[1]-'1'][s[0]-'a'] == 'p')
 		{
-			printf("7\n");
 			if(s[0]-s[3] == 0)
 			{
-				printf("6\n");
 				if(s[4]-s[1] >= 1 && s[4]-s[1] <= 2)
 				{
-					printf("2\n");
 					ch[s[4]-'1'][s[3]-'a'] = 'p';
 					ch[s[1]-'1'][s[0]-'a'] = '_';
 				}
@@ -29,10 +23,8 @@ void check_string(char ch[][9], char s[])
 		}
 		else if(ch[s[1]-'1'][s[0]-'a'] == 'P')
 		{
-			printf("5\n");
 			if(s[0]-s[3] == 0)
 			{
-				printf("6\n");
 				if(s[1]-s[4] >= 1 && s[1]-s[4] <= 2)
 				{
 					printf("2\n");
@@ -48,10 +40,10 @@ void check_string(char ch[][9], char s[])
 	}
 	else
 		printf("Enter correct data\n");
-	printf("3\n");
+	printf("\n\n");
 }
 
-void create_bord(char p[][9])
+void create_bord(char p[][10])
 {
 	char ko[9][9] = { 
 	"bnrqkrnb", 
